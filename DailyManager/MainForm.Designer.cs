@@ -41,6 +41,7 @@
             this.btn_Delete = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.월별계획달성여부체크ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutDailyManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,7 +99,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 15);
             this.label2.TabIndex = 4;
-            this.label2.Text = "일정 내용:";
+            this.label2.Text = "일정 계획:";
             // 
             // groupBox1
             // 
@@ -179,16 +180,24 @@
             // fileFToolStripMenuItem
             // 
             this.fileFToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.월별계획달성여부체크ToolStripMenuItem,
             this.closeXToolStripMenuItem});
             this.fileFToolStripMenuItem.Name = "fileFToolStripMenuItem";
             this.fileFToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.fileFToolStripMenuItem.Text = "File(F)";
             // 
+            // 월별계획달성여부체크ToolStripMenuItem
+            // 
+            this.월별계획달성여부체크ToolStripMenuItem.Name = "월별계획달성여부체크ToolStripMenuItem";
+            this.월별계획달성여부체크ToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.월별계획달성여부체크ToolStripMenuItem.Text = "월별 계획 달성 여부 체크";
+            this.월별계획달성여부체크ToolStripMenuItem.Click += new System.EventHandler(this.월별계획달성여부체크ToolStripMenuItem_Click);
+            // 
             // closeXToolStripMenuItem
             // 
             this.closeXToolStripMenuItem.Name = "closeXToolStripMenuItem";
-            this.closeXToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.closeXToolStripMenuItem.Text = "Close(X)";
+            this.closeXToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.closeXToolStripMenuItem.Text = "닫기(X)";
             this.closeXToolStripMenuItem.Click += new System.EventHandler(this.closeXToolStripMenuItem_Click);
             // 
             // helpHToolStripMenuItem
@@ -204,6 +213,7 @@
             this.aboutDailyManagerToolStripMenuItem.Name = "aboutDailyManagerToolStripMenuItem";
             this.aboutDailyManagerToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.aboutDailyManagerToolStripMenuItem.Text = "About DailyManager";
+            this.aboutDailyManagerToolStripMenuItem.Click += new System.EventHandler(this.aboutDailyManagerToolStripMenuItem_Click);
             // 
             // label3
             // 
@@ -359,5 +369,6 @@
         private Label label4;
         private Label label5;
         private Label label6;
+        private ToolStripMenuItem 월별계획달성여부체크ToolStripMenuItem;
     }
 }

@@ -211,5 +211,17 @@ namespace DailyManager
                 g.errormessage(ex.Message); 
             }
         }
+
+        private void 월별계획달성여부체크ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CheckForm cf = new CheckForm(conn);
+            cf.Show(); 
+        }
+
+        private void aboutDailyManagerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm af = new AboutForm();
+            af.Show(); 
+        }
     }
 }
