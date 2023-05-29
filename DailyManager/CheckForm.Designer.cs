@@ -35,10 +35,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.DateLabel = new System.Windows.Forms.Label();
-            this.CheckDates = new System.Windows.Forms.Label();
-            this.UnCheckDates = new System.Windows.Forms.Label();
             this.NoDateLabel = new System.Windows.Forms.Label();
+            this.UnCheckDates = new System.Windows.Forms.Label();
+            this.CheckDates = new System.Windows.Forms.Label();
+            this.DateLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,23 +107,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "결 과";
             // 
-            // DateLabel
+            // NoDateLabel
             // 
-            this.DateLabel.AutoSize = true;
-            this.DateLabel.Location = new System.Drawing.Point(70, 21);
-            this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(38, 15);
-            this.DateLabel.TabIndex = 0;
-            this.DateLabel.Text = "날짜: ";
-            // 
-            // CheckDates
-            // 
-            this.CheckDates.AutoSize = true;
-            this.CheckDates.Location = new System.Drawing.Point(70, 42);
-            this.CheckDates.Name = "CheckDates";
-            this.CheckDates.Size = new System.Drawing.Size(66, 15);
-            this.CheckDates.TabIndex = 1;
-            this.CheckDates.Text = "달성 일수: ";
+            this.NoDateLabel.AutoSize = true;
+            this.NoDateLabel.Location = new System.Drawing.Point(70, 84);
+            this.NoDateLabel.Name = "NoDateLabel";
+            this.NoDateLabel.Size = new System.Drawing.Size(106, 15);
+            this.NoDateLabel.TabIndex = 3;
+            this.NoDateLabel.Text = "계획 미등록 일수: ";
             // 
             // UnCheckDates
             // 
@@ -134,14 +125,23 @@
             this.UnCheckDates.TabIndex = 2;
             this.UnCheckDates.Text = "미달성 일수: ";
             // 
-            // NoDateLabel
+            // CheckDates
             // 
-            this.NoDateLabel.AutoSize = true;
-            this.NoDateLabel.Location = new System.Drawing.Point(70, 84);
-            this.NoDateLabel.Name = "NoDateLabel";
-            this.NoDateLabel.Size = new System.Drawing.Size(106, 15);
-            this.NoDateLabel.TabIndex = 3;
-            this.NoDateLabel.Text = "계획 미등록 일수: ";
+            this.CheckDates.AutoSize = true;
+            this.CheckDates.Location = new System.Drawing.Point(70, 42);
+            this.CheckDates.Name = "CheckDates";
+            this.CheckDates.Size = new System.Drawing.Size(66, 15);
+            this.CheckDates.TabIndex = 1;
+            this.CheckDates.Text = "달성 일수: ";
+            // 
+            // DateLabel
+            // 
+            this.DateLabel.AutoSize = true;
+            this.DateLabel.Location = new System.Drawing.Point(70, 21);
+            this.DateLabel.Name = "DateLabel";
+            this.DateLabel.Size = new System.Drawing.Size(38, 15);
+            this.DateLabel.TabIndex = 0;
+            this.DateLabel.Text = "날짜: ";
             // 
             // CheckForm
             // 
@@ -158,7 +158,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "CheckForm";
-            this.Text = "월별 일정 계획 달성 여부 체크";
+            this.Text = "월별 달성/미달성/미등록 일수 체크";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

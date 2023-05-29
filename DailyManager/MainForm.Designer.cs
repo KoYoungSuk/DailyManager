@@ -95,11 +95,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(317, 108);
+            this.label2.Location = new System.Drawing.Point(345, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 15);
+            this.label2.Size = new System.Drawing.Size(34, 15);
             this.label2.TabIndex = 4;
-            this.label2.Text = "일정 계획:";
+            this.label2.Text = "내용:";
             // 
             // groupBox1
             // 
@@ -189,14 +189,14 @@
             // 월별계획달성여부체크ToolStripMenuItem
             // 
             this.월별계획달성여부체크ToolStripMenuItem.Name = "월별계획달성여부체크ToolStripMenuItem";
-            this.월별계획달성여부체크ToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
-            this.월별계획달성여부체크ToolStripMenuItem.Text = "월별 계획 달성 여부 체크";
+            this.월별계획달성여부체크ToolStripMenuItem.Size = new System.Drawing.Size(264, 22);
+            this.월별계획달성여부체크ToolStripMenuItem.Text = "월별 달성/미달성/미등록 일수 체크";
             this.월별계획달성여부체크ToolStripMenuItem.Click += new System.EventHandler(this.월별계획달성여부체크ToolStripMenuItem_Click);
             // 
             // closeXToolStripMenuItem
             // 
             this.closeXToolStripMenuItem.Name = "closeXToolStripMenuItem";
-            this.closeXToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.closeXToolStripMenuItem.Size = new System.Drawing.Size(264, 22);
             this.closeXToolStripMenuItem.Text = "닫기(X)";
             this.closeXToolStripMenuItem.Click += new System.EventHandler(this.closeXToolStripMenuItem_Click);
             // 

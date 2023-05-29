@@ -143,5 +143,42 @@ namespace DailyManager.DAO
             return count;
         }
         
+        public int getYesDays(String yearmonth)
+        {
+            String sql = "SELECT COUNT(*) AS YESCOUNT FROM DAILY WHERE TITLE LIKE :TITLE AND STATUS = 'Yes'";
+            OracleCommand scmd = new OracleCommand(sql, conn);
+            scmd.BindByName = true;
+            scmd.Parameters.Add(new OracleParameter("title", "%" + yearmonth + "%"));
+            OracleDataReader dr = scmd.ExecuteReader();
+            int count = 0;
+
+            while (dr.Read())
+            {
+                count = Int32.Parse(dr["yescount"]?.ToString());
+            }
+            dr.Close();
+            scmd.Dispose();
+            return count; 
+        }
+
+        public int getNoDays(String yearmonth)
+        {
+            String sql = "SELECT COUNT(*) AS YESCOUNT FROM DAILY WHERE TITLE LIKE :TITLE AND STATUS = 'No'";
+            OracleCommand scmd = new OracleCommand(sql, conn);
+            scmd.BindByName = true;
+            scmd.Parameters.Add(new OracleParameter("title", "%" + yearmonth + "%"));
+            OracleDataReader dr = scmd.ExecuteReader();
+            int count = 0;
+
+            while (dr.Read())
+            {
+                count = Int32.Parse(dr["yescount"]?.ToString());
+            }
+            dr.Close();
+            scmd.Dispose();
+            return count;
+        }
+
+
     }
 }
