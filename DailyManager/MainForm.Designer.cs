@@ -247,6 +247,7 @@
             this.Modify_radiobtn.Tag = "Modify";
             this.Modify_radiobtn.Text = "수정 모드";
             this.Modify_radiobtn.UseVisualStyleBackColor = true;
+            this.Modify_radiobtn.CheckedChanged += new System.EventHandler(this.Modify_radiobtn_CheckChanged);
             // 
             // Read_radiobtn
             // 
@@ -258,6 +259,7 @@
             this.Read_radiobtn.Tag = "Read";
             this.Read_radiobtn.Text = "읽기 모드";
             this.Read_radiobtn.UseVisualStyleBackColor = true;
+            this.Read_radiobtn.CheckedChanged += new System.EventHandler(this.Read_radioBtn);
             // 
             // textBox3
             // 

@@ -38,7 +38,7 @@ namespace DailyManager
 
                 Dictionary<string, string> dailylist = dailydao.getDailyListByTitle(title);
 
-                if(count != 0) //일정 정보가 있음 
+                if(count != 0) //일정 정보가 있음 (읽기/수정 모드) 
                 {
                     textBox1.Text = title;
                     if (dailylist.ContainsKey("content"))
@@ -72,7 +72,7 @@ namespace DailyManager
                     }
 
                     btn_Delete.Enabled = true; 
-                    btn_Save.Text = "Modify"; //정보가 이미 존재하므로 수정 모드로 들어감 
+                    btn_Save.Text = "Modify"; //정보가 이미 존재하므로 수정 모드로 들어감 (읽기 모드로는 Form에서 라디오버튼으로 
                     groupBox1.Visible = true;
                     groupBox2.Visible = true; 
                 }
@@ -81,8 +81,8 @@ namespace DailyManager
                     textBox2.Text = "";
                     textBox3.Text = "";
                     textBox4.Text = "";
-                    Modify_radiobtn.Checked = true; 
-                    No_radiobtn.Checked = true;
+                    Modify_radiobtn.Checked = true; //일단 수정 모드. 
+                    No_radiobtn.Checked = true; //기본값: 일성 미달성 
                     btn_Save.Text = "Save"; 
                     btn_Delete.Enabled = false;
                     groupBox1.Visible = false;
@@ -161,11 +161,11 @@ namespace DailyManager
 
                 int result = 0;
 
-                if(btn_Save.Text.Equals("Save"))
+                if(btn_Save.Text.Equals("Save")) //저장 
                 {
                     result = dailydao.createCalendar(dailydto); 
                 }
-                else if(btn_Save.Text.Equals("Modify"))
+                else if(btn_Save.Text.Equals("Modify")) //수정 
                 {
                     result = dailydao.updateCalendar(dailydto);
                 }
@@ -221,7 +221,29 @@ namespace DailyManager
         private void aboutDailyManagerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutForm af = new AboutForm();
-            af.Show(); 
+            af.Show();
         }
+
+        #region["읽기 모드로 전환"] 
+        private void Read_radioBtn(object sender, EventArgs e)
+        {
+            btn_Save.Enabled = false;
+            btn_Delete.Enabled = true; 
+            textBox1.ReadOnly = true;
+            textBox2.ReadOnly = true; 
+        }
+
+        #endregion
+
+        #region["수정 모드로 전환"] 
+        private void Modify_radiobtn_CheckChanged(object sender, EventArgs e)
+        {
+            btn_Save.Enabled = true;
+            btn_Delete.Enabled = false;  
+            textBox1.ReadOnly = false;
+            textBox2.ReadOnly = false; 
+        }
+        #endregion
+
     }
 }
