@@ -23,7 +23,7 @@ namespace DailyManager
             this.conn = conn;
             InitializeComponent();
             label6.Text = g.checkOS();
-            getCalendar(DateTime.Now.ToString("yyyy-MM-dd")); 
+            getCalendar(DateTime.Now.ToString("yyyy-MM-dd")); //현재 날짜로 등록된 일정을 불러온다. 
         }
 
 
@@ -128,7 +128,7 @@ namespace DailyManager
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-            textBox1.Text = monthCalendar1.SelectionStart.ToShortDateString(); 
+            textBox1.Text = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd"); 
             getCalendar(textBox1.Text);  
         }
 
@@ -245,5 +245,9 @@ namespace DailyManager
         }
         #endregion
 
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
     }
 }
