@@ -21,7 +21,7 @@ HOW TO USE SOURCE CODE:
   # Screenshot 
 
 
-![image](https://github.com/KoYoungSuk/DailyManager/assets/58511486/f6a7df12-48ef-43e7-aee0-05ed6903d511)
+![image](https://github.com/KoYoungSuk/DailyManager/assets/58511486/6ac13241-e147-4d87-a7b5-914d0fa62e1a)
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
